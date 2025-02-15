@@ -1,4 +1,5 @@
 import time 
+import keyboard
 def clock():
     t = time.strftime("%H:%M:%S")
     print(
@@ -9,3 +10,6 @@ def clock():
 while True:
     clock()
     time.sleep(1)
+    if keyboard.is_pressed('e'):
+        print("You pressed 'e'. Exiting...") 
+        break 
